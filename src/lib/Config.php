@@ -1,14 +1,18 @@
 <?php
+
 /*
  Global configuration file
  Created Date: 21/March/2013
 */
-class Config{
 
- public static function Read($name){
- 
-  $config = array(
-             'Commonxml' => '<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mem="http://schemas.datacontract.org/2004/07/MemberSuite.SDK.Types"
+class Config
+{
+
+    public static function Read($name)
+    {
+
+        $config = [
+            'Commonxml' => '<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mem="http://schemas.datacontract.org/2004/07/MemberSuite.SDK.Types"
                                xmlns:i="http://www.w3.org/2001/XMLSchema-instance"
                               xmlns:a="http://www.w3.org/2001/XMLSchema"
                               xmlns:b="http://schemas.datacontract.org/2004/07/MemberSuite.SDK.Searching">
@@ -24,15 +28,13 @@ class Config{
                                 </s:Header>
                                 <s:Body></s:Body>
                               </s:Envelope>',
-			 'BaseNamespaces' => 'xmlns:mem="http://schemas.datacontract.org/2004/07/MemberSuite.SDK.Types"
+            'BaseNamespaces' => 'xmlns:mem="http://schemas.datacontract.org/2004/07/MemberSuite.SDK.Types"
                                xmlns:i="http://www.w3.org/2001/XMLSchema-instance"
-                              xmlns:a="http://www.w3.org/2001/XMLSchema"'
-            );
-  
-  return $config[$name];
- 
- }
- 
-}
+                              xmlns:a="http://www.w3.org/2001/XMLSchema"',
+        ];
 
-?>
+        return $config[$name];
+
+    }
+
+}
